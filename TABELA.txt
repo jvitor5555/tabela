@@ -1,0 +1,40 @@
+CREATE DATABASE Loja;
+
+USE Loja;
+
+CREATE TABLE Subcategoria(
+
+Cod_Subcategoria SMALLINT NOT NULL,
+Nome_Subcategoria VARCHAR(100) NOT NULL,
+Data_Subcategoria DATE,
+PRIMARY KEY (Cod_Subcategoria)
+);
+
+-- Tabela Subcategoria Criada --
+
+CREATE TABLE Categoria(
+
+Cod_Categoria SMALLINT NOT NULL,
+Cod_Subcategoria SMALLINT NOT NULL,
+Nome_Categoria VARCHAR(60) NOT NULL,
+PRIMARY KEY(Cod_Categoria),
+FOREIGN KEY(Cod_Subcategoria) REFERENCES
+Subcategoria(Cod_Subcategoria)
+);
+
+-- Tabela Categoria Criada --
+
+CREATE TABLE Produtos(
+
+Cod_Produto SMALLINT NOT NULL,
+Cod_Categoria SMALLINT NOT NULL,
+Nome_Produto VARCHAR(80),
+Descricao_Produto VARCHAR(),
+Preco_Produto FLOAT NOT NULL,
+Peso_Produto FLOAT NOT NULL,
+PRIMARY KEY 9*-
+FOREIGN KEY
+Categoria
+
+
+);
